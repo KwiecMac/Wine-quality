@@ -7,10 +7,10 @@ pd.set_option('display.max_columns', None)
 df = pd.read_csv(file, sep=';', names=['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density', 'ph', 'sulphates', 'alcohol', 'quality'])
 print(df.head())
 
-plt.figure(figsize=(10,6))
+q = plt.figure(figsize=(10,6))
 sns.countplot(df["quality"],palette="muted")
 df["quality"].value_counts()
-plt.show()
+q.show()
 
 quality = df["quality"].values
 category = []
@@ -28,8 +28,9 @@ data.drop(columns="quality",axis=1,inplace=True)
 
 print(data.head())
 
-plt.figure(figsize=(10,6))
+c = plt.figure(figsize=(10,6))
 sns.countplot(data["category"],palette="muted")
 data["category"].value_counts()
-plt.show()
+c.show()
 
+plt.show()
