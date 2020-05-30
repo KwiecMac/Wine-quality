@@ -15,11 +15,6 @@ if __name__ == "__main__":
                          test_size=0.2, random_state=13)
 
     np.set_printoptions(threshold=np.inf)
-    """
-    print(data_set.import_not_all_data(np.array(['alcohol', 'total sulfur dioxide', 'sulphates', 'volatile acidity',
-                                                 'density'])))
-    """
-    #data_set.import_all_data()
 
     neural = MLPClassifier(solver='adam', alpha=0.0001,
                        hidden_layer_sizes=(100, 10),
